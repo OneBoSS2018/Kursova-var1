@@ -1,11 +1,12 @@
 class UsersController < ApplicationController
   before_action :find_user, only: %i[show]
   def index
-    @users = User.all
+    @users = User.all.order
   end
 
   def show
   end
+
 
   private
 
