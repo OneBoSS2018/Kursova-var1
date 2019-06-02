@@ -11,14 +11,14 @@ class AnswersController < ApplicationController
       end
       flash[:notice] = "#{@msg}"
     end
-    redirect_to tests_path
+    redirect_to tests_index_path
   end
 
   def destroy
       @question = Question.find(params[:question_id])
       @answer = @question.answer.find(params[:id])
       @answer.destroy
-      redirect_to tests_path
+      redirect_to tests_index_path
     end
   private
 
