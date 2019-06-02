@@ -1,0 +1,5 @@
+<%= user.username%>
+<%= image_tag user.avatar.url,style:"width:100px;"%>
+<% user.rating%>
+<%= link_to "Profile", user_path(user.id)%>
+<hr>
