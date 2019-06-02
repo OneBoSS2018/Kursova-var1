@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  get 'questions/new'
+  get 'questions/index'
+  get 'questions/show'
+  get 'questions/edit'
   devise_for :admin_users, ActiveAdmin::Devise.config
   ActiveAdmin.routes(self)
   devise_for :users
