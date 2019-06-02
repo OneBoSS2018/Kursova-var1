@@ -1,3 +1,7 @@
 <div class="start text-center">
-  <%= link_to "Start",tests_index_path, data:{turbolinks: false}, :class => "btn btn-success" %>
+  <%= link_to tests_index_path, data:{turbolinks: false} do %>
+    <div class="butt">
+      Start
+    </div>
+  <% end %>
 </div>

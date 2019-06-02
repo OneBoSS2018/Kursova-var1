@@ -1,22 +1,21 @@
-<nav class="navbar navbar-expand-sm bg-dark navbar-dark">
-  <div class="container-fluid">
-    <div class="navbar-header">
-      <li><%= link_to "UzNU Tests", root_path, :class => 'navbar-brand'  %></li>
-    </div>
-    <ul class="navbar-nav navbar-right">
-      <% if user_signed_in? %>
-        <li class="nav-link">Logged in as <%= image_tag(current_user.avatar_url, size: "24x24", :class => 'rounded-circle') %> <strong><%= current_user.username %></strong></li>
-        <%= link_to destroy_user_session_path, method: :delete, :class => 'nav-link' do %> Logout
-          <i class="fas fa-sign-out-alt"></i>
+
+<div class="nav">
+    <%= link_to 'UzNU Tests', root_path, :class => 'nav-item' %>
+    <div class="nav-right">
+        <div class="grid">
+            <% if user_signed_in? %>
+                <li class="nav-item">Logged in as  <strong><%= current_user.username %></strong></li>
+                <%= link_to destroy_user_session_path, method: :delete, :class => 'nav-item' do %> Logout
+                <i class="fas fa-sign-out-alt"></i>
+                <% end %>
+            <% else %>
+                <li><%= link_to new_user_registration_path, :class => 'nav-item' do %> Sign up
+                    <i class="fas fa-user-plus"></i>
+                <% end %></li>
+                <li><%= link_to  new_user_session_path, :class => 'nav-item' do %>Login
+                <i class="fas fa-sign-in-alt"></i>
+                <% end %></li>
         <% end %>
-      <% else %>
-        <li><%= link_to new_user_registration_path, :class => 'nav-link' do %> Sign up
-            <i class="fas fa-user-plus"></i>
-        <% end %></li>
-        <li><%= link_to  new_user_session_path, :class => 'nav-link' do %>Login
-          <i class="fas fa-sign-in-alt"></i>
-        <% end %></li>
-      <% end %>
-    </ul>
-  </div>
-</nav>
+        </div>
+    </div>
+</div>

@@ -15,3 +15,35 @@
  */
  @import 'bootstrap';
  @import 'tests';
+
+ .nav {
+     height: 70px;
+     width: 100%;
+     background-color: #000;
+     padding: 20px;
+ }
+
+ .nav .nav-item{
+     text-decoration: none;
+     color: #fff;
+     font-size: 20px;
+ }
+
+ .nav .nav-right{
+     width: 90%;
+     float:right;
+     text-align: right;
+ }
+
+ .nav .nav-right .grid{
+     margin-top: 3px;
+     float: right;
+     display: grid;
+     grid-template-columns: 200px 70px;
+ }
+
+ .nav .nav-right .grid .nav-item{
+     text-decoration: none;
+     color: #fff;
+     font-size: 17px;
+ }
