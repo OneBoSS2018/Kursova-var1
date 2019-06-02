@@ -39,6 +39,7 @@ ActiveRecord::Schema.define(version: 2019_06_02_161510) do
   end
 
   create_table "users", force: :cascade do |t|
+    t.integer "rating", default: 0, null: false
     t.boolean "admin", default: false
     t.string "username", default: "", null: false
     t.string "email", default: "", null: false
