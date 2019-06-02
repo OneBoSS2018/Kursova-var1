@@ -1,0 +1,11 @@
+<% if @flag == true %>
+	$("#modal-window").hide();
+	$(".modal-backdrop").hide();
+	$("#question_<%= @question.id %> a button").addClass('green').attr("disabled", true).text('Correct answer');
+	$("#question_<%= @question.id %> a button font").remove();
+<% else %>
+	$("#modal-window").hide();
+	$(".modal-backdrop").hide();
+	$("#question_<%= @question.id %> a button").addClass('red').attr("disabled", true).text('Wrong answer');
+	$("#question_<%= @question.id %> a button font").remove();
+<% end %>

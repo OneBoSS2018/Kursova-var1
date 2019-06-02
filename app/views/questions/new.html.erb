@@ -1,2 +1,12 @@
-<h1>Questions#new</h1>
-<p>Find me in app/views/questions/new.html.erb</p>
+
+<div class="container">
+  <div class="row main">
+    <div class="main-login main-center">
+<center><%= form_for @question, url: questions_path do |f| %>
+	<% if @question.errors.any? %>
+	 <% @question.errors.full_messages.each do |msg| %>
+	 	<li><%=msg%></li>
+	   <%end%>
+	 <%end%>
+	<%= render 'questions/form', f:f%>
+<%end%></center>

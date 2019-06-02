@@ -1,0 +1,11 @@
+<div class="form-group">
+<label for="question" class="cols-sm-2 control-label"><p><%= f.label "Question" %></p></label>
+ 	<div class="cols-sm-10">
+	  <div class="input-group">
+	  <%= f.text_field :text, placeholder: "Enter your Question", type: "text", class: "form-control"%>
+	  	  </div>
+	 </div>
+</div>
+	<div class="form-group">
+	  <p><%= f.submit "Save", class: "btn btn-primary btn-lg btn-block login-button", id: "button" %></p>
+	</div>

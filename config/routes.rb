@@ -4,7 +4,9 @@ Rails.application.routes.draw do
   ActiveAdmin.routes(self)
   devise_for :users
   resources :users, only: %i[index show]
-  resources :questions
-  responses :answers, only: %i[create destroy]
-  
+  resources :questions do
+  resources :answers
+  post :right
+end
+
 end

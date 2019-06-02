@@ -1,0 +1,40 @@
+
+<div class="modal-dialog" role="document">
+  <div class="modal-content">
+    <div class="modal-header">
+      <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+      <h4 class="modal-title" id="myModalLabel"><center><h1><%= @question.text %></h1></center></h4>
+    </div>
+
+    <div class="modal-body">
+    <%=form_for :right, url: question_right_path(@question.id), method: :post, html: {class: 'form-signin'}, remote: true do |f|%>
+    <div class="container">
+
+      <% @answers.each do |answer|%>
+      <div class="row">
+      <div class="col-md-9 col-xs-12 col-sm-9  col-lg-6">
+        <label>
+                <h5><%= radio_button_tag 'user_answer', answer.id %>
+                <%= answer.text%></h5>
+        </label>
+        </div>
+        </div>
+      <% end %>
+     <p> <%=f.submit "Add" %></p>
+    <% end %>
+
+    </div>
+    </div>
+      <div class="modal-footer"><center>
+        <% if current_user and current_user.admin %>
+          <%= form_for @answer, url:question_answers_path(@question.id) do |f| %>
+            <%= f.label "Add Answer"%>
+            <p><%= f.text_field :text, placeholder: "Enter your Answer"%>
+            <%= f.check_box(:right)%></p>
+           <div><p><%= f.submit "Send" %></p></div>
+          <%end%>
+        <%end%>
+        </center>
+      </div>
+  </div>
+</div>
