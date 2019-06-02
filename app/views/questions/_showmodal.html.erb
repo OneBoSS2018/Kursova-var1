@@ -10,6 +10,7 @@
     <%=form_for :right, url: question_right_path(@question.id), method: :post, html: {class: 'form-signin'}, remote: true do |f|%>
     <div class="container">
 
+
       <% @answers.each do |answer|%>
       <div class="row">
       <div class="col-md-9 col-xs-12 col-sm-9  col-lg-6">
@@ -20,11 +21,12 @@
         </div>
         </div>
       <% end %>
-     <p> <%=f.submit "Add" %></p>
+     <p> <%=f.submit "Confirm", class: "btn cust-btn", id: "btn-registration", style: "font-size: 20px;letter-spacing: 1px;"%></p>
     <% end %>
 
     </div>
     </div>
+
       <div class="modal-footer"><center>
         <% if current_user and current_user.admin %>
           <%= form_for @answer, url:question_answers_path(@question.id) do |f| %>

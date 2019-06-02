@@ -8,7 +8,7 @@ class QuestionsController < ApplicationController
 
   def show
       @answers = Answer.where(question_id: @question.id)
-      @answer= Answer.new
+      @answer = Answer.new
       respond_to do |format|
       format.html
       format.js
@@ -46,14 +46,14 @@ class QuestionsController < ApplicationController
 
   def right
     @flag = false
-  pp  @user = User.find(params[:id])
+#  pp  @user = User.find(params[:id])
     @question = Question.find(params[:question_id])
     @user_answer = params[:user_answer]
     Answer.where(id: @user_answer).each do |x|
       if x.right
         @flag=true
-    pp   @user.rating += 1
-    pp   @user.save
+#    pp   @user.rating += 1
+#    pp   @user.save
         break
       end
     end
