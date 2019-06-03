@@ -1,6 +1,6 @@
 class User < ApplicationRecord
   attr_accessor :login
-
+  #scope :featured, order('rating DESC')
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
 

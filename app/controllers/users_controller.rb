@@ -1,7 +1,7 @@
 class UsersController < ApplicationController
   before_action :find_user, only: %i[show]
   def index
-    @users = User.all.order
+    @users = User.all.order('rating DESC')
   end
 
   def show
