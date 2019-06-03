@@ -1,0 +1,45 @@
+.col-5 {
+
+	margin-top: 50px;
+
+}
+.row{
+	height: 480px;
+	font-family: 'Hind Siliguri', sans-serif;
+}
+
+h2{
+	color:#3D4E80;
+}
+
+.field{
+	margin-top: 12px;
+  border-radius: 10px;
+  border-color: #3D4E80;
+}
+
+.control{
+  border-radius: 10px;
+  border-color: #3D4E80;
+}
+
+.button{
+	color:#3D4E80;
+}
+
+.subm{
+	border: 1px solid #3D4E80;
+	background:  #3D4E80 !important;
+	border-radius: 11px;
+	outline:0px !important;
+}
+.subm:hover{
+	background-image:linear-gradient(to top, #3D4E80 0%, #7A9CFF) !important;
+	border: 1px solid #3D4E80;
+
+}
+
+a{
+	text-decoration: none !important;
+	color: #7A9CFF;
+}

@@ -15,6 +15,8 @@
  */
  @import 'bootstrap';
  @import 'tests';
+ @import 'users';
+ @import 'devise';
 
  .nav {
      height: 70px;
@@ -39,7 +41,7 @@
      margin-top: 3px;
      float: right;
      display: grid;
-     grid-template-columns: 200px 70px;
+     grid-template-columns: 70px 160px 70px;
  }
 
  .nav .nav-right .grid .nav-item{
@@ -47,3 +49,15 @@
      color: #fff;
      font-size: 17px;
  }
+
+ .subm{
+	border: 1px solid #3D4E80;
+	background:  #3D4E80 !important;
+	border-radius: 11px;
+	outline:0px !important;
+}
+
+.subm:hover{
+	background-image:linear-gradient(to top, #3D4E80 0%, #7A9CFF) !important;
+	border: 1px solid #3D4E80;
+}

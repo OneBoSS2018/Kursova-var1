@@ -1,7 +1,13 @@
-<%= @user.username%>
-<%= image_tag @user.avatar.url,style:"width:400px;"%>
-<%= @user.email%>
-<%= @user.rating%>
-<% if @user.id == current_user.id  && user_signed_in? %>
-<%= link_to "Setting",edit_user_registration_path%>
-<% end %>
+<div class="profile">
+  <div class="row">
+    <%= image_tag @user.avatar.url, :class => 'img'%>
+    <div class="info">
+      <strong>User name: </strong> <%= @user.username%> <br>
+      <strong>Email: </strong><%= @user.email%> <br>
+      <strong>Rating: </strong><%= @user.rating%> <br>
+      <% if @user.id == current_user.id  && user_signed_in? %>
+      <%= link_to "Setting",edit_user_registration_path%>
+      <% end %>
+    </div>
+  </div>
+</div>

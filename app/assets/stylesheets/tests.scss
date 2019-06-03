@@ -7,13 +7,113 @@
 }
 
 .start .butt{
-    border-radius: 10px;
-    height: 60px;
-    width: 80px;
-    background-color: red; 
-    margin-left: 47%;
+    border-radius: 40px;
+    height: 70px;
+    width: 120px;
+    background-color: red;
+    margin-left: 70%;
     padding: 20px;
     text-decoration: none;
+    font-size: 20px;
     color: #fff;
-    
+}
+
+.start .a{
+    text-decoration: none;
+}
+
+.start .butt p{
+    color: #fff;
+}
+
+
+.question_block {
+    text-align: center;
+  a {
+    button {
+      color: white;
+      font-weight: 800;
+    }
+  }
+}
+
+.tests{
+  margin-top: 20%;
+  .button {
+    width:120px;
+    background: blue;
+    border: 0.1px solid black;
+    padding: 15px 32px;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 10px;
+    margin: 3px;
+  }
+  .button:hover {
+    width:120px;
+    background: blue;
+    border: 0.1px solid black;
+    padding: 15px 32px;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 10px;
+  }
+  .red {
+    border-radius: 10px;
+    background: red;
+    width:120px;
+    border: 0.1px solid black;
+    padding: 15px 32px;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+}
+.red:hover {
+  border-radius: 10px;
+  background: red;
+  width:120px;
+  border: 0.1px solid black;
+  padding: 15px 32px;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+.green {
+    border-radius: 10px;
+    background: green;
+    width:120px;
+    border: 0.1px solid black;
+    padding: 15px 32px;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+}
+.green:hover {
+    border-radius: 10px;
+    background: green;
+    width:120px;
+    border: 0.1px solid black;
+    padding: 15px 32px;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+}
+
+  font{
+  font-weight:bold;
+ }
 }

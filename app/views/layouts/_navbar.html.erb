@@ -4,11 +4,13 @@
     <div class="nav-right">
         <div class="grid">
             <% if user_signed_in? %>
-                <li class="nav-item">Logged in as  <strong><%= current_user.username %></strong></li>
+                <li> <%= link_to "Rating" , users_path , :class => 'nav-item'%> </li>
+                <li class="nav-item">Logged in as <strong> <%= link_to current_user.username , user_path(current_user) , :class => 'nav-item'%></strong></li>
                 <%= link_to destroy_user_session_path, method: :delete, :class => 'nav-item' do %> Logout
                 <i class="fas fa-sign-out-alt"></i>
                 <% end %>
             <% else %>
+            <li> <%= link_to "Rating" , users_path , :class => 'nav-item'%> </li>
                 <li><%= link_to new_user_registration_path, :class => 'nav-item' do %> Sign up
                     <i class="fas fa-user-plus"></i>
                 <% end %></li>
